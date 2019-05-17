@@ -104,6 +104,16 @@ export default [
     `
   },
   {
+    type: "text",
+    content: "To undo the last migration"
+  },
+  {
+    type: "code",
+    content: `
+      $ knex migrate:down
+    `
+  },
+  {
     type: "heading",
     size: "lg",
     content: "Seed files",
@@ -337,6 +347,13 @@ export default [
     method: "up",
     example: "knex.migrate.up([config])",
     description: "Runs the next chronological migration that has not yet be run",
+    children: [    ]
+  },
+  {
+    type: "method",
+    method: "down",
+    example: "knex.migrate.down([config])",
+    description: "Undo the last migration run",
     children: [    ]
   },
   {
